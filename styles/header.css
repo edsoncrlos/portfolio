@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
+
+.header {
+    height: 6rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.header__top {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header--take-all-height-screen {
+    height: 100vh;
+}
+
+.header__title {
+    padding-left: 2.4rem;
+    font-size: 3.2rem;
+}
+
+.toggle-menu {
+    padding-right: 2.4rem;
+}
+
+.toggle-menu__image {
+    color: var(--color-text);
+    fill: currentColor;
+    width: 3.2rem;
+    cursor: pointer;
+}
+
+.toggle-menu__close,
+.toggle-menu__open {
+    border: transparent;
+    background: transparent; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+}
+
+.toggle-menu__close--display-none,
+.toggle-menu__open--display-none {
+    display: none;
+}
+
+.menu {
+    font-size: 5rem;  
+
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    display: none;
+}
+
+.list--show-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list__item {
+    padding-top: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .toggle-menu {
+        display: none;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        font-size: 2.0rem;
+    }
+
+    .list {
+        padding-right: 2.4rem;
+
+        display: flex;
+        gap: 1.6rem;
+    }
+}

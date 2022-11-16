@@ -1,7 +1,29 @@
+:root {
+    --color-background: #fefefe;
+    --color-text: #adadad;
+    --color-primary: #191970;
+    --color-primary-hover: #101046;
+    --color-secondary: #00ffef;
+    --color-text-light: #fffff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 10px */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .sr-only {
