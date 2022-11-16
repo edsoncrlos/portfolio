@@ -16,6 +16,7 @@
 
 .header--take-all-height-screen {
     height: 100vh;
+    overflow-y: auto;
 }
 
 .header__title {
@@ -52,6 +53,10 @@
 }
 
 .menu {
+    display: none;
+}
+
+.menu--show-list {
     font-size: 5rem;  
 
     display: flex;
@@ -59,17 +64,10 @@
 }
 
 .list {
-    display: none;
-}
-
-.list--show-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.list__item {
-    padding-top: 2.4rem;
+    gap: 2.4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -80,16 +78,19 @@
     .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .menu {
         font-size: 2.0rem;
+        display: flex;
+        align-items: center;
     }
 
     .list {
         padding-right: 2.4rem;
-
-        display: flex;
+        flex-direction: row;
+        align-items: center;
         gap: 1.6rem;
     }
 }
