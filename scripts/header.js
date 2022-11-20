@@ -21,7 +21,7 @@ function closeMenu() {
 
     topHeader.classList.remove('header--take-all-height-screen');
     websitePageList.classList.remove('menu--show-list');
-    html.style.overflowY = 'none';
+    html.style.overflowY = 'auto';
 
     window.removeEventListener('resize', closeMenuWhenResizeforDesktop);
 }
