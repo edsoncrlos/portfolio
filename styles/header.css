@@ -1,5 +1,8 @@
 .header {
     height: 6rem;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
     
     background-image: var(--gradient);
     color: var(--color-text-light);
