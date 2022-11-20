@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
-
 .header {
     height: 6rem;
+    
+    background-image: var(--gradient);
+    color: var(--color-text-light);
+}
 
-    background-color: var(--color-primary);
-    color: var(--color-text);
+.header__title {
+    color: var(--color-text-light);
 }
 
 .header__top {
@@ -29,7 +31,7 @@
 }
 
 .toggle-menu__image {
-    color: var(--color-text);
+    color: var(--color-text-light);
     fill: currentColor;
     width: 3.2rem;
     cursor: pointer;
@@ -68,6 +70,11 @@
     flex-direction: column;
     align-items: center;
     gap: 2.4rem;
+}
+
+
+.list_link:hover {
+    color: var(--color-secondary-contrast);
 }
 
 @media screen and (min-width: 768px) {

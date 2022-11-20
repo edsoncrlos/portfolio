@@ -1,10 +1,16 @@
 :root {
-    --color-background: #fefefe;
-    --color-text: #adadad;
-    --color-primary: #191970;
-    --color-primary-hover: #101046;
-    --color-secondary: #00ffef;
-    --color-text-light: #fffff;
+    --color-text-light: #f0f0f0;
+    --color-text-dark: #000000;
+    
+    --color-background: #4facfe;
+
+    --color-primary: #00f2fe;
+    --color-primary-contrast: #2e2e2e;
+
+    --color-secondary: #003459;
+    --color-secondary-contrast: #0DFFD5;
+
+    --gradient: linear-gradient(to right, #1B4079 0%, #00f2fe 23%, #1B4079 95%);
 }
 
 * {
