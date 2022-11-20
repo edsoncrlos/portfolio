@@ -1,15 +1,15 @@
 const html = document.querySelector('html');
 
 const [buttonOpenMenu, buttonCloseMenu] = document.querySelector('.toggle-menu').children;
-const header = document.querySelector('.header');
-const list = document.querySelector('.menu');
+const topHeader = document.querySelector('.header');
+const websitePageList = document.querySelector('.menu');
 
 function openMenu() {
     buttonOpenMenu.classList.add('toggle-menu__open--display-none');
     buttonCloseMenu.classList.remove('toggle-menu__close--display-none');
 
-    header.classList.add('header--take-all-height-screen');
-    list.classList.add('menu--show-list');
+    topHeader.classList.add('header--take-all-height-screen');
+    websitePageList.classList.add('menu--show-list');
     html.style.overflowY = 'hidden';
 
     window.addEventListener('resize', closeMenuWhenResizeforDesktop);
@@ -19,8 +19,8 @@ function closeMenu() {
     buttonOpenMenu.classList.remove('toggle-menu__open--display-none');
     buttonCloseMenu.classList.add('toggle-menu__close--display-none');
 
-    header.classList.remove('header--take-all-height-screen');
-    list.classList.remove('menu--show-list');
+    topHeader.classList.remove('header--take-all-height-screen');
+    websitePageList.classList.remove('menu--show-list');
     html.style.overflowY = 'none';
 
     window.removeEventListener('resize', closeMenuWhenResizeforDesktop);
