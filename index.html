@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/contacts.css">
     <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -90,12 +91,107 @@
                 </figure>
 
                 <p class="about__text">
-                    Quando criança adorava brincar de lego e ficava mavarivalhado com as diversas coisas que eu conseguia fazer. Com o tempo descobrir na progamação esse mesmo desejo de criação retornar. Atualmente estudante de ciência da computação na UFMA. Quando não estou progamando ou estudando gosto de assistir animes e vídeo no youtube.
+                    Quando criança adorava brincar de lego e ficava mavarivalhado com as diversas coisas que eu conseguia fazer. Com o tempo descobrir na progamação esse mesmo desejo de criação retornar. Atualmente sou estudante de ciência da computação na UFMA. Quando não estou progamando ou estudando gosto de assistir animes e vídeos no youtube.
                 </p>
             </div>
 
         </section>
+
+        <!--<section class="portfolio">
+            <h2 class="portfolio__title">Portifólio</h2>
+        </section>-->
+
+        <section class="contacts" id="contacts-link">
+            <h2 class="contacts__title">Contatos</h2>
+            
+            <div class="contacts__content">
+                <form action="" class="form">
+                    <label for="name" class="form__group">
+                        <span class="form__label-text">Nome</span>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" class="form__input">
+                    </label>
+
+                    <label for="email" class="form__group">
+                        <span class="form__label-text">Email</span>
+                        <input type="email" id="email" name="email" placeholder="Seu email" class="form__input">
+                    </label>
+
+                    <label for="subject" class="form__group">
+                        <span class="form__label-text">Assunto</span>
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" class="form__input">
+                    </label>
+
+                    <label for="message" class="form__group">
+                        <span class="form__label-text">Sua mensagem</span>
+                        <textarea id="message" name="message" placeholder="Mensagem" class="form__textarea"></textarea>
+                    </label>
+
+                    <button class="form__button" type="submit">Enviar</button>
+                </form>
+
+                <article class="contacts__container">
+                    <section class="contacts__links">
+                        <h3 class="contacts__title-network">Contatos</h3>
+                        <ul class="contacts-list">
+                            <li class="contacts-list__item">
+                                <span class="contacts-list__how-to-contact">email:</span>
+                                <span class="contacts-list__contact">edsoncarlos.dev@gmail.com</span>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section class="contacts__links">
+                        <h3 class="contacts__title-network">Redes sociais</h3>
+                        <ul class="contacts__title-network contacts-list">
+                            <li class="contacts-list__item">
+                                <a class="contacts-list__link" href="https://www.linkedin.com/in/edson-crlos/" target="_blank">
+                                    <svg class="contacts-list__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                        <line x1="8" y1="11" x2="8" y2="16"></line>
+                                        <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                                        <line x1="12" y1="16" x2="12" y2="11"></line>
+                                        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-list__item">
+                                <a class="contacts-list__link" href="https://github.com/edsoncrlos" target="_blank">
+                                    <svg class="contacts-list__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
+            
+        </section>
+
+        <!--<section class="education">
+            <h2 class="education__title">Educação</h2>
+        </section>
+
+        <section class="experience">
+            <h2 class="experience__title">Experiência</h2>
+        </section>-->
+
     </main>
+
+    <!--<footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="" target="_blank"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>-->
 
     <script src="scripts/header.js"></script>
 </body>

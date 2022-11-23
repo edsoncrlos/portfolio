@@ -1,0 +1,133 @@
+.contacts {
+    height: 100vh;
+}
+
+.contacts__title {
+    display: inline-block;
+    margin-top: 4rem;
+    width: 100%;
+    text-align: center;
+    font-size: 3.2rem;    
+}
+
+.contacts__content {
+    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* form */
+
+.form {
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    padding: 3.2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form__group {
+    width: 90%;
+    border-radius: inherit;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form__label-text {
+    font-size: 1.6rem;
+}
+
+.form__input {
+    height: 30px;
+    padding-left: 1rem;
+    border-radius: inherit;
+
+    font-size: 1.4rem;
+}
+
+.form__textarea {
+    height: 7.2rem;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 100%;
+    resize: none;
+    border-radius: inherit;
+}
+
+.form__button {
+    width: 90%;
+    border-radius: inherit;
+
+    cursor: pointer;
+}
+
+/* Contacts */
+
+.contacts__container {
+    width: 100%;
+}
+
+.contacts__links {
+    align-self: flex-start;
+    padding: 2.4rem 0 0 2.5%;
+}
+
+.contacts__title-network {
+    font-size: 2.4rem;
+    
+}
+
+.contacts-list__item {
+    padding-top: 0.8rem;
+}
+
+.contacts-list__how-to-contact {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.contacts-list__contact {
+    font-size: 1.6rem;
+}
+
+.contacts-list__image {
+    width: 4.0rem;
+
+    background-color: var(--color-secondary);
+    border-radius: 0.1em;
+    color: var(--color-secondary-contrast);
+}
+
+.contacts-list__image:hover {
+    outline: 3px solid var(--color-primary);
+}
+
+.contacts__title-network.contacts-list {
+    display: flex;
+    gap: 1.6rem;
+    padding-left: 1.2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .contacts__content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .form {
+        max-width: 40rem;
+    }
+
+    .contacts__container {
+        order: -2;
+        max-width: 30rem;
+    }
+}
