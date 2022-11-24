@@ -1,5 +1,7 @@
 const html = document.querySelector('html');
 
+// toggle Menu
+
 const [buttonOpenMenu, buttonCloseMenu] = document.querySelector('.toggle-menu').children;
 const topHeader = document.querySelector('.header');
 const websitePageList = document.querySelector('.menu');
@@ -34,3 +36,44 @@ function closeMenuWhenResizeforDesktop () {
 
 buttonOpenMenu.addEventListener('click', openMenu);
 buttonCloseMenu.addEventListener('click', closeMenu);
+
+// change link color according to scroll
+
+let currentPageLink = document.querySelector('.list__link:first-child');
+currentPageLink.style.color = '#0DFFD5';
+
+function changeColorPageLink (element) {
+    currentPageLink.style = '#fffff';
+    currentPageLink = element;  
+
+    element.style.color = '#0DFFD5';
+}
+
+function currentPage(e) {
+    changeColorPageLink(e.target);
+}
+
+const linksPages = document.querySelector('.list');
+linksPages.addEventListener('click', (event) => currentPage(event));
+
+
+const mainSections = document.querySelectorAll('main > section');
+const idArrayHeaderLinksAndSections = Array.from(mainSections).map((section) => {
+    return `#${section.id}`
+})
+
+function checkPagePosition (selector) {
+    const element = document.querySelector(selector);
+    const position = element.getBoundingClientRect();
+    const start = position.top;
+
+    if (start <= 200) {
+        const link = document.querySelector(`a[href="${selector}"]`);
+        changeColorPageLink(link);
+    }
+}
+
+idArrayHeaderLinksAndSections.forEach((selector) => {
+    window.addEventListener('scroll', () => checkPagePosition(selector));
+})
+
