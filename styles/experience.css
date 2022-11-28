@@ -1,11 +1,12 @@
 .experience {
     height: 100%;
+    padding-bottom: 10rem;
 }
 
 .experience__title {
     padding-top: 4rem;
     height: 10%;
-
+    
     font-size: 3.2rem;
     text-align: center;
 }
