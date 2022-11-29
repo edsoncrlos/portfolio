@@ -1,0 +1,126 @@
+.portfolio {
+    height: 100%;
+}
+
+.portfolio__title {
+    padding-top: 4rem;
+    height: 10%;
+
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.portfolio__cards {
+    padding: 4rem 0;
+    height: 90%;
+    
+    display: grid;  
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.6rem;
+}
+
+.portfolio__card {
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 0.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+
+}
+
+.portfolio__image {
+    margin: auto 0;
+    max-width: 100%;
+    height: auto;
+
+    cursor: pointer;
+}
+
+.portfolio__card-title {
+    font-size: 1.8rem;
+    padding-top: 1.6rem;
+}
+
+/* modal */
+.portfolio__modal {
+    margin: auto;
+    max-width: 1000px;
+    height: 100vh;
+    border: none; 
+    border-radius: .5rem;
+}
+
+.portfolio__wrap {  
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio__video {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.portfolio__modal::backdrop {
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.portfolio__image-modal {
+    padding: 0;
+}
+
+.portfolio__why {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.portfolio__description {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem 1rem 0;
+}
+
+.portfolio__close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 6em;
+    
+    display: flex;
+}
+
+.portfolio__button {
+    margin-top: 1.6rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1px solid white;
+    
+    border: none;
+    border-radius: 4em;
+    
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-contrast);
+    
+    cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+    .portfolio__cards {
+        margin: 0 1.6rem;
+    }
+
+    
+}

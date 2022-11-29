@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/experience.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/education.css">
     <link rel="stylesheet" href="styles/contacts.css">
     <link rel="stylesheet" href="styles/about.css">
@@ -100,9 +101,166 @@
 
         </section>
 
-        <!--<section class="portfolio">
+        <section class="portfolio" id="portfolio-link">
             <h2 class="portfolio__title">Portifólio</h2>
-        </section>-->
+
+            <div class="portfolio__cards">
+                <section class="portfolio__card">
+                    <img class="portfolio__image" src="assets/images/dev.finance.png" alt="logo dev-finance">
+                    <h3 class="portfolio__card-title">
+                    Dev Finance</h3>
+
+                    <dialog class="portfolio__modal">
+                        <div class="portfolio__wrap">
+                            <video class="portfolio__video" src="assets/videos/dev-finance.mp4" controls></video>
+                            
+                            <h3 class="portfolio__card-title">Dev.finance</h3>
+                            <p class="portfolio__why">Aplicativo desenvolvido na primeira Maratona discover da Rocketseat.</p>
+                            <button class="portfolio__close-modal">
+                                <svg class="toggle-menu__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                            <p class="portfolio__description">Aplicativo Financeiro para ajudar o usuário a controlar o balanço das receitas e despesas.</p>
+                            
+                            <a class="portfolio__link" href="https://github.com/edsoncrlos/dev-finance-discover-01" target="_blank">
+                                <button class="portfolio__button">gitHub do projeto</button>
+                            </a>
+                            <a class="portfolio__link" href="https://dev-finance-discover-01.vercel.app/" target="_blank">
+                                <button class="portfolio__button">Visualize o projeto</button>
+                            </a>
+
+                            <section class="technologies">
+                                <h3 class="technologies__title">Tecnólogias utilizadas</h3>
+
+                                <ul class="technologies__list">
+                                    <li class="technologies__item html"></li>
+                                    
+                                    <hr class="technologies__separation">
+                                    
+                                    <li class="technologies__item css"></li>
+                                    
+                                    <hr class="technologies__separation">
+                                    
+                                    <li class="technologies__item javascript"></li>
+
+                                </ul>
+                            </section>
+
+                        </div>
+
+                    </dialog>
+                </section>
+
+                <section class="portfolio__card">
+                    <img class="portfolio__image" src="assets/images/youtube-customization.png" alt="Imagem do aplicativo Youtube Customization">
+                    <h3 class="portfolio__card-title">
+                    Youtube Customization</h3>
+
+                    <dialog class="portfolio__modal">
+                        <div class="portfolio__wrap">
+                            <video class="portfolio__video" controls src="assets/videos/youtube-customization.mp4"></video>
+
+                            <h3 class="portfolio__card-title">Youtube Customization</h3>
+                            <button class="portfolio__close-modal">
+                                <svg class="toggle-menu__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                            <p class="portfolio__description">Aplicativo para guardar e alterar  o tamanho dos vídeos do youtube.</p>
+                            
+                            <a class="portfolio__link" href="https://github.com/edsoncrlos/youtube-customization" target="_blank">
+                                <button class="portfolio__button">gitHub do projeto</button>
+                            </a>
+                            <a class="portfolio__link" href="https://youtube-customization-production.up.railway.app/" target="_blank">
+                                <button class="portfolio__button">Visualize o projeto</button>
+                            </a>
+
+                            <section class="technologies">
+                                <h3 class="technologies__title">Tecnólogias utilizadas</h3>
+
+                                <ul class="technologies__list">
+                                    <li class="technologies__item html">
+                                    </li>
+                                    
+                                    <hr  class="technologies__separation">
+                                    
+                                    <li class="technologies__item css">
+                                    </li>
+                                    
+                                    <hr  class="technologies__separation">
+                                    
+                                    <li class="technologies__item javascript">
+                                    </li>
+                                    
+                                    <hr  class="technologies__separation">
+
+                                    <li class="technologies__item nodejs">
+                                    </li>
+                                    
+                                    <hr  class="technologies__separation">
+                                    
+                                    <li class="technologies__item ejs">
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </dialog>
+                </section>
+
+                <section class="portfolio__card">
+                    <img class="portfolio__image" src="assets/images/video-player.png" alt="Imagem do aplicativo video player">
+                    <h3 class="portfolio__card-title">
+                    Video Player</h3>
+
+                    <dialog class="portfolio__modal">
+                        <div class="portfolio__wrap">
+                            <video class="portfolio__video" src="assets/videos/video-player.mp4" controls></video>
+                            <h3 class="portfolio__card-title">Video Player</h3>
+                            <button class="portfolio__close-modal">
+                                <svg class="toggle-menu__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                            <p class="portfolio__description">Aplicativo para upload e consumo de vídeos.</p>
+                            
+                            <a class="portfolio__link" href="https://github.com/alibayramli/angular-video-player" target="_blank">
+                                <button class="portfolio__button">gitHub do projeto</button>
+                            </a>
+                            <a class="portfolio__link" href="https://ali-video-player.vercel.app/" target="_blank">
+                                <button class="portfolio__button">Visualize o projeto</button>
+                            </a>
+
+                            <section class="technologies">
+                                <h3 class="technologies__title">Tecnólogias utilizadas</h3>
+
+                                <ul class="technologies__list">
+                                    <li class="technologies__item html"></li>
+                                    
+                                    <hr class="technologies__separation">
+                                    
+                                    <li class="technologies__item css"></li>
+                                    
+                                    <hr class="technologies__separation">
+                                    
+                                    <li class="technologies__item javascript"></li>
+
+                                    <hr>
+
+                                </ul>
+                            </section>
+
+                        </div>
+                    </dialog>
+                </section>
+            </div>
+        </section>
 
         <section class="contacts" id="contacts-link">
             <h2 class="contacts__title">Contatos</h2>
@@ -269,6 +427,7 @@
     </footer>
 
     <script src="scripts/header.js"></script>
+    <script src="scripts/portfolio.js"></script>
     <script src="scripts/footer.js"></script>
 </body>
 </html>
