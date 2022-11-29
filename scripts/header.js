@@ -29,7 +29,7 @@ function closeMenu() {
 }
 
 function closeMenuWhenResizeforDesktop () {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 840) {
         closeMenu();
     };
 }
@@ -51,6 +51,10 @@ function changeColorPageLink (element) {
 
 function currentPage(e) {
     changeColorPageLink(e.target);
+
+    if (window.innerWidth < 768) {
+        closeMenu();
+    }
 }
 
 const linksPages = document.querySelector('.list');
@@ -58,8 +62,10 @@ linksPages.addEventListener('click', (event) => currentPage(event));
 
 
 const mainSections = document.querySelectorAll('main > section');
-const idArrayHeaderLinksAndSections = Array.from(mainSections).map((section) => {
-    return `#${section.id}`
+const idArrayHeaderLinksAndSections = Array.from(mainSections).filter((section) => {
+    if (section.id != '') {
+        return section.id;
+    }
 })
 
 function checkPagePosition (selector) {
@@ -74,6 +80,6 @@ function checkPagePosition (selector) {
 }
 
 idArrayHeaderLinksAndSections.forEach((selector) => {
-    window.addEventListener('scroll', () => checkPagePosition(selector));
+    window.addEventListener('scroll', () => checkPagePosition(`#${selector.id}`));
 })
 

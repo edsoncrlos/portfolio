@@ -1,0 +1,93 @@
+.technologies {
+    width: 100%;
+}
+
+.technologies__title {
+    padding-top: 1.6rem;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.technologies__list {
+    margin-top: 3.2rem;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.technologies__item {
+    padding-top: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.technologies__separation {
+    width: 90%;
+}
+
+.technologies__image {
+    margin: 0;
+    width: auto;
+}
+
+.technologies__name {
+    font-size: 2.0rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.technologies__definition {
+    font-size: 1.6rem;
+    padding: 0 0.8rem;
+}
+
+.technologies__see-more {
+    font-size: 1.4rem;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    padding-bottom: 0.8rem;
+}
+
+.technologies__wrap-text-see-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.technologies__official-site {   
+    order: 4;
+    padding: 0.8rem;
+}
+
+.technologies__button {
+    font-size: 1.4rem;
+    background-color: transparent;
+    padding: 0.4rem;
+    border-radius: 4em;
+    cursor: pointer;
+}
+
+
+.technologies__list-feature {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.technologies__title-feature {
+    padding-left: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.technologies__item-feature {
+    font-size: 1.6rem;
+    list-style: inside;
+    padding: 0.4rem 0.4rem 0 2.4rem;
+}
