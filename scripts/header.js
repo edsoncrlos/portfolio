@@ -52,7 +52,7 @@ function changeColorPageLink (element) {
 function currentPage(e) {
     changeColorPageLink(e.target);
 
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 900) {
         closeMenu();
     }
 }
