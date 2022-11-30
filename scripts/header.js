@@ -57,8 +57,10 @@ function currentPage(e) {
     }
 }
 
-const linksPages = document.querySelector('.list');
-linksPages.addEventListener('click', (event) => currentPage(event));
+const linksPages = document.querySelectorAll('.list__link');
+linksPages.forEach((linkPage) => {
+    linkPage.addEventListener('click', (event) => currentPage(event));
+})
 
 
 const mainSections = document.querySelectorAll('main > section');
@@ -82,4 +84,3 @@ function checkPagePosition (selector) {
 idArrayHeaderLinksAndSections.forEach((selector) => {
     window.addEventListener('scroll', () => checkPagePosition(`#${selector.id}`));
 })
-
