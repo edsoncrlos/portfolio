@@ -3,13 +3,8 @@
 
     display: grid;
     align-items: center;
-    justify-content: center;
     grid-template-rows: 200px 1fr;
-}
-
-.about__title {
-    font-size: 3.2rem;
-    text-align: center;
+    gap: 4rem;
 }
 
 .about__container {

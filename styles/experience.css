@@ -4,15 +4,8 @@
 
     display: grid;
     align-items: center;
-    grid-template-rows: 100px 1fr;
-}
-
-.experience__title {
-    padding-top: 4rem;
-    height: 10%;
-    
-    font-size: 3.2rem;
-    text-align: center;
+    grid-template-rows: 160px 1fr;
+    gap: 4rem;
 }
 
 .experience__cards {

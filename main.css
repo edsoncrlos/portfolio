@@ -10,7 +10,8 @@
     --color-secondary: #003459;
     --color-secondary-contrast: #0DFFD5;
 
-    --gradient: linear-gradient(to right, #1B4079 0%, #00f2fe 23%, #1B4079 95%);
+    --gradient: linear-gradient(to right, #1B4079 0%, #4facfe 20%, #1B4079 95%);
+    --font-size-lg: clamp(32px, 7vw + 1rem, 72px);
 }
 
 * {
@@ -22,6 +23,7 @@
 html {
     font-size: 62.5%; /* 10px */
     scroll-behavior: smooth;
+    font-family: 'Montserrat';
 }
 
 body {
@@ -35,6 +37,13 @@ li {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+section h2 {
+    font-size: var(--font-size-lg);
+    font-weight: 300;
+    margin-top: 4rem;
+    text-align: center;
 }
 
 .sr-only {

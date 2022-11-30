@@ -4,15 +4,11 @@
     display: grid;
     align-items: center;
     grid-template-rows: 100px 1fr;
-    gap: 1.6rem;
+    gap: 4rem;
 }
 
 .portfolio__title {
-    padding-top: 4rem;
     height: 10%;
-
-    font-size: 3.2rem;
-    text-align: center;
 }
 
 .portfolio__cards {
