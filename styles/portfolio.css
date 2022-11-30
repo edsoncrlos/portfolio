@@ -1,5 +1,10 @@
 .portfolio {
-    height: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    align-items: center;
+    grid-template-rows: 100px 1fr;
+    gap: 1.6rem;
 }
 
 .portfolio__title {
@@ -11,9 +16,6 @@
 }
 
 .portfolio__cards {
-    padding: 4rem 0;
-    height: 90%;
-    
     display: grid;  
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -22,6 +24,8 @@
 
 .portfolio__card {
     max-width: 500px;
+    min-height: 250px;
+    
     border: 1px solid black;
     border-radius: 0.6rem;
 

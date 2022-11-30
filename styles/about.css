@@ -1,19 +1,18 @@
 .about {
-    height: 100vh;
+    min-height: 100vh;
 
-    display: inline-block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 200px 1fr;
 }
 
 .about__title {
-    margin-top: 4rem;
-    
     font-size: 3.2rem;
     text-align: center;
 }
 
 .about__container {
-    margin-top: 2.4rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +38,7 @@
 @media screen and (min-width: 913px) {
     .about__container {
         margin-top: 8rem;
+        align-self: flex-start;
         
         flex-direction: row;
         justify-content: center;

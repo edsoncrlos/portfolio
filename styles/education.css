@@ -1,18 +1,19 @@
 .education {
-    height: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    align-items: center;
+    grid-template-rows: 100px 1fr;
 }
 
 .education__title {
     padding-top: 4rem;
-    height: 10%;
 
     font-size: 3.2rem;
     text-align: center;
 }
 
 .education__cards {
-    padding: 4rem 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
