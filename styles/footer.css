@@ -84,7 +84,7 @@
     }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 630px) {
 
     .footer__list-credits {
         gap: 0.8rem;
