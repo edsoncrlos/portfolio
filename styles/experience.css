@@ -21,7 +21,7 @@
 .experience__card {
     width: 90%;
     max-width: 800px;
-    height: 200px;
+    padding: 2.4rem 0;
 
     border: 1px solid black;
     border-radius: 0.3rem;
@@ -30,6 +30,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 1.6rem;
 }
 
 .experience__card-title {
