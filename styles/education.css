@@ -31,11 +31,11 @@
 }
 
 .education__card-title {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
 }
 
 .education__card-institution {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .education__time-interval {
@@ -47,7 +47,7 @@
     font-size: 1rem;
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 400px) {
 
     .education__card-title {
         font-size: 2.4rem;
