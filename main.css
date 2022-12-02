@@ -1,3 +1,13 @@
+@import url("styles/header.css");
+@import url("styles/home.css");
+@import url("styles/about.css");
+@import url("styles/contacts.css");
+@import url("styles/education.css");
+@import url("styles/portfolio.css");
+@import url("styles/technologies.css");
+@import url("styles/experience.css");
+@import url("styles/footer.css");
+
 :root {
     --color-text-light: #f0f0f0;
     --color-text-dark: #000000;
