@@ -1,4 +1,6 @@
 const html = document.querySelector('html');
+const maxWidthWhereToggleMenuIsActive = 900;
+const topDistanceToHighlightPageLink = 200;
 
 // toggle Menu
 
@@ -29,7 +31,7 @@ function closeMenu() {
 }
 
 function closeMenuWhenResizeforDesktop () {
-    if (window.innerWidth >= 840) {
+    if (window.innerWidth >= maxWidthWhereToggleMenuIsActive) {
         closeMenu();
     };
 }
@@ -52,7 +54,7 @@ function changeColorPageLink (element) {
 function currentPage(e) {
     changeColorPageLink(e.target);
 
-    if (window.innerWidth < 900) {
+    if (window.innerWidth < maxWidthWhereToggleMenuIsActive) {
         closeMenu();
     }
 }
@@ -74,8 +76,7 @@ function checkPagePosition (selector) {
     const element = document.querySelector(selector);
     const position = element.getBoundingClientRect();
     const start = position.top;
-
-    if (start <= 200) {
+    if (start <= topDistanceToHighlightPageLink) {
         const link = document.querySelector(`a[href="${selector}"]`);
         changeColorPageLink(link);
     }
