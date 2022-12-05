@@ -783,22 +783,26 @@
                 <form action="" class="form">
                     <label for="name" class="form__group">
                         <span class="form__label-text">Nome</span>
-                        <input type="text" id="name" name="name" placeholder="Seu nome" class="form__input">
+                        <input type="texrequiredt" id="name" name="name" placeholder="Seu nome" class="form__input" required>
+                        <span class="form__label-error sr-only">Digite o seu nome, por favor.</span>
                     </label>
 
                     <label for="email" class="form__group">
                         <span class="form__label-text">Email</span>
-                        <input type="email" id="email" name="email" placeholder="Seu email" class="form__input">
+                        <input type="email" id="email" name="email" placeholder="Seu email" class="form__input" required>
+                        <span class="form__label-error sr-only">Digite o seu email, por favor</span>
                     </label>
 
                     <label for="subject" class="form__group">
                         <span class="form__label-text">Assunto</span>
-                        <input type="text" id="subject" name="subject" placeholder="Assunto" class="form__input">
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" class="form__input" required>
+                        <span class="form__label-error sr-only">Diga qual o assunto do email, por favor.</span>
                     </label>
 
                     <label for="message" class="form__group">
                         <span class="form__label-text">Sua mensagem</span>
-                        <textarea id="message" name="message" placeholder="Mensagem" class="form__textarea"></textarea>
+                        <textarea id="message" name="message" placeholder="Mensagem" class="form__textarea" required></textarea>
+                        <span class="form__label-error sr-only">Opa, eu acho que você esqueceu de digitar a mensagem.</span>
                     </label>
 
                     <button class="form__button" type="submit">Enviar</button>
@@ -938,6 +942,7 @@
     </footer>
     <script src="scripts/header.js"></script>
     <script src="scripts/portfolio.js"></script>
+    <script src="scripts/contacts.js"></script>
     <script src="scripts/technologies.js"></script>
     <script src="scripts/footer.js"></script>
 </body>
