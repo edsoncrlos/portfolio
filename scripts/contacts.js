@@ -42,11 +42,11 @@ function getValues() {
 }
 
 function validateEmail (email) {
-    regex = /[^\w.@]/g
+    const regex = /[^\w.@]/g
     const emailInput = email; 
     const emailText = email.value;
     
-    notShouldContain = emailText.match(regex);
+    const notShouldContain = emailText.match(regex);
     if (notShouldContain != null && notShouldContain.length != 0) {
         throw new emailFormatException(notShouldContain, emailInput);
     }
@@ -67,7 +67,7 @@ function removeCaractersnotAllowed (e) {
     e.target.value = text.replace(/[^\w.@]/g, '');
 }
 
-RequiredFields = {
+const RequiredFields = {
     requiredFields: document.querySelectorAll('[required]'),
     requiredFieldsMessage: {
         name: 'Digite o seu nome, por favor.',
