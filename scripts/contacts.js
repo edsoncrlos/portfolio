@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
 
     } catch (e) {
         if (e instanceof emailFormatException) {
-            removeCaractersnotAllowed(e);
+            removeCharactersNotAllowed(e);
             const spanErrorMessage = e.target.nextElementSibling;
             
             let errorMessage = `O símbolo ${e.value.toString().replace(',',' ')} não é permido.`;
@@ -62,7 +62,7 @@ function emailFormatException (value, target) {
     };
 }
 
-function removeCaractersnotAllowed (e) {
+function removeCharactersNotAllowed (e) {
     const text = e.target.value;
     e.target.value = text.replace(/[^\w.@]/g, '');
 }
