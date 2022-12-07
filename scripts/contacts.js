@@ -1,10 +1,15 @@
+import {Storage, allEmailMessages, EmailMessage} from "./messages.js";
 const form = document.querySelector('.form');
+const buttonEraseMessages = document.querySelector('.contacts__erase-messages');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-        
+    
     try {
         const {name, email, subject, message} = getValues();
+        const emailMessage = new EmailMessage(name, email, subject, message);
+        allEmailMessages.push(emailMessage);
+        Storage.set(allEmailMessages);
 
     } catch (e) {
         if (e instanceof emailFormatException) {
@@ -22,6 +27,8 @@ form.addEventListener('submit', (e) => {
         }
     }
 })
+
+buttonEraseMessages.addEventListener('click', Storage.remove);
 
 function getValues() {
     const fields = document.querySelectorAll('.form__group [required]');
