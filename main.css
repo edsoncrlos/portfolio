@@ -12,13 +12,17 @@
     --color-text-light: #f0f0f0;
     --color-text-dark: #000000;
     
-    --color-background: #4facfe;
+    --color-background: #efefef;
+    --color-background-input: #E5E9EC;
 
     --color-primary: #00f2fe;
     --color-primary-contrast: #2e2e2e;
 
     --color-secondary: #003459;
     --color-secondary-contrast: #0DFFD5;
+
+    --color-button: #008080;
+    --color-button-hover: #018E8E;
 
     --gradient: linear-gradient(to right, #1B4079 0%, #4facfe 20%, #1B4079 95%);
     --font-size-lg: clamp(32px, 7vw + 1rem, 72px);
@@ -34,6 +38,7 @@ html {
     font-size: 62.5%; /* 10px */
     scroll-behavior: smooth;
     font-family: 'Montserrat';
+    background-color: #efefef;
 }
 
 body {
