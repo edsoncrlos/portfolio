@@ -83,7 +83,7 @@
 
 .form__button:hover {
     box-shadow: 1px 1px 5px 2px black;
-    background-color: var(--color-button);
+    background-color: var(--color-button-hover);
 }
 
 .form__label-error {
