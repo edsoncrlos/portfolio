@@ -806,6 +806,25 @@
                     </label>
 
                     <button class="form__button" type="submit">Enviar</button>
+
+                    <aside>
+                        <div class="form__status form__success form__status--display-none">
+                            <svg class="form__image"  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="3" stroke="white" fill="#2dcc71" stroke-linecap="" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="#2dcc71"></path>
+                                <path d="M5 12l5 5l10 -10"></path>
+                             </svg>
+                            <p>Mensagem enviada</p>
+                        </div>
+                        <div class="form__status form__error form__status--display-none" >
+                            <svg class="form__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="#D33F49" fill="" stroke-linecap="roun" stroke-linejoin="">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="20" y1="4" x2="4" y2="20"></line>
+                                <line x1="4" y1="4" x2="20" y2="20"></line>
+                            </svg>
+
+                            <p>Erro ao enviar</p>
+                        </div>
+                    </aside>
                 </form>
 
                 <article class="contacts__container">

@@ -2,6 +2,16 @@ import {Storage, allEmailMessages, EmailMessage} from "./messages.js";
 const form = document.querySelector('.form');
 const buttonEraseMessages = document.querySelector('.contacts__erase-messages');
 
+function showPopUpForCertainTime (selector) {
+    const TimeForShowPopUp = 3000;
+    const popUP = document.querySelector(`.${selector}`);
+    popUP.classList.remove('form__status--display-none');
+
+    setInterval(() => {
+        popUP.classList.add('form__status--display-none');
+    }, TimeForShowPopUp);
+}
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -10,7 +20,8 @@ form.addEventListener('submit', (e) => {
         const emailMessage = new EmailMessage(name, email, subject, message);
         allEmailMessages.push(emailMessage);
         Storage.set(allEmailMessages);
-
+        showPopUpForCertainTime('form__success');
+        
     } catch (e) {
         if (e instanceof emailFormatException) {
             removeCharactersNotAllowed(e);
@@ -24,6 +35,7 @@ form.addEventListener('submit', (e) => {
             spanErrorMessage.classList.remove('sr-only');
         } else {
             console.log(e);
+            showPopUpForCertainTime('form__error');
         }
     }
 })

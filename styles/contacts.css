@@ -91,6 +91,33 @@
     padding-top: 0.8rem;
 }
 
+.form__status {
+    position: fixed;
+    bottom: 70px;
+    left: 0.5%;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    background-color: white;
+    padding: 0 12px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    font-weight: 500;
+}
+
+.form__status--display-none {
+    display: none;
+}
+
+.form__image {
+    width: 20px;
+    border-radius: 10em;
+}
+
 /* Contacts */
 
 .contacts__container {
@@ -154,4 +181,14 @@
         order: -2;
         max-width: 30rem;
     }
+
+    .form__status {
+        padding: 0 12px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .form__image {
+        width: 24px;
+    }    
 }
