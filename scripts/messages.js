@@ -5,7 +5,7 @@ export const Storage = {
     }, 
     
     set(allEmailMessage) {
-        localStorage.setItem("emailMessage", JSON.stringify(allEmailMessage))
+        localStorage.setItem("emailMessage", JSON.stringify(allEmailMessage));
     },
 
     remove () {
@@ -35,10 +35,16 @@ const ManageMessages = {
                 allEmailMessages.forEach((message => {
                     messageList.innerHTML += `
                         <li class="messages__item">
-                            <p class="messages__name">${message.name}</p>
-                            <p class="messages__email">${message.email}</p>
-                            <p class="messages__subject">${message.subject}</p>
-                            <p class="messages__message">${message.message}</p>
+                            <p class="messages__sender">
+                                <b>Nome</b> <span class="messages__sender-text">${message.name}</span>
+                            </p>
+                            <p class="messages__sender">
+                                <b>Email</b> <span class="messages__sender-text">${message.email}</span>
+                            </p>
+                            <p class="messages__sender">
+                                <b>Assunto</b> <span class="messages__sender-text">${message.subject}</span>
+                            </p>
+                            <p>${message.message}</p>
                         </li>
                     `;
                 }))
