@@ -138,6 +138,12 @@
     padding-top: 0.8rem;
 }
 
+.contacts-list__wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+        
 .contacts-list__how-to-contact {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -165,6 +171,20 @@
     padding-left: 1.2rem;
 }
 
+/* clipboard  */
+.clipboard {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.clipboard__icon {
+    width: 40px;
+}
+
+.clipboard__icon--display-none {
+    display: none;
+}
+
 @media screen and (min-width: 800px) {
     .contacts__content {
         align-self: center;
@@ -175,11 +195,12 @@
 
     .form {
         max-width: 40rem;
+        margin-right: 3.2rem;
     }
 
     .contacts__container {
         order: -2;
-        max-width: 30rem;
+        max-width: 35rem;
     }
 
     .form__status {

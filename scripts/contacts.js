@@ -127,3 +127,32 @@ const RequiredFields = {
 RequiredFields.requiredFields.forEach((required) => {
     required.addEventListener('invalid', (e) => RequiredFields.invalid(e));
 })
+
+//clipboard
+const clipboard = document.querySelector('.clipboard');
+
+function toggleIconsInClipboard () {
+    const copy = document.querySelector('.clipboard__copy');
+    const success = document.querySelector('.clipboard__success');
+
+    copy.classList.add('clipboard__icon--display-none');
+    success.classList.remove('clipboard__icon--display-none');
+
+    setInterval (() => {
+        copy.classList.remove('clipboard__icon--display-none');
+        success.classList.add('clipboard__icon--display-none');
+    }, 3000);
+}
+
+clipboard.onclick = () => {
+    const contact = document.querySelector('.contacts-list__contact');
+
+    try {
+        (async () => {
+            await navigator.clipboard.writeText(contact.textContent)
+        })();
+        toggleIconsInClipboard();
+    } catch (e) {
+        console.log(e)
+    };
+}
