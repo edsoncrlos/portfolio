@@ -171,6 +171,12 @@
     padding-left: 1.2rem;
 }
 
+.contacts__messages {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
 /* clipboard  */
 .clipboard {
     display: inline-block;

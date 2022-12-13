@@ -15,8 +15,21 @@
 
             <ul class="messages__list">
                 <p class="message__text">Você ainda não recebeu nenhuma mensagem.</p>
+                </p>
             </ul>
+
+            <dialog class="messages__modal" open>
+                <div class="messages__wrap">
+
+                    <p class="messages__warn-text">Você tem certeza que deseja apagar todas as mensagens?</p>
+                    <div class="messages__wrap-buttons">
+                        <button class="messages__buttons messages__button-cancel">Cancelar</button>
+                        <button class="messages__buttons messages__button-confirm">Sim</button>
+                    </div>
+                </div>
+            </dialog>
         </section>
+
     </main>
 
     <script type="module" src="scripts/messages.js"></script>

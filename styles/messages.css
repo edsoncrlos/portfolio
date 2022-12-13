@@ -43,3 +43,79 @@
 .messages__sender-text {
     word-wrap: break-word;
 }
+
+.messages__wrap-image {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messages__image-trash {
+    width: 3.2rem;
+    margin-right: 1.6rem;
+
+    cursor: pointer;
+}
+
+.messages__modal {
+    margin: auto;
+    width: 98%;
+    max-width: 600px;
+    height: 25vh;
+    position: absolute;
+    top: 40%;
+
+    border: 1px solid black;
+    border-radius: 0.4em;
+    background-color: var(--color-background);
+}
+
+.messages__wrap {
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.messages__warn-text {
+    text-align: center;
+}
+
+.messages__buttons {
+    text-transform: uppercase;
+    height: 3.6rem;
+    width: max-content;
+    padding: 0 1.6rem;
+    border-radius: 0.3em;
+
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.messages__buttons:hover {
+    opacity: 0.8;
+    scale: 1.2;
+    margin: 0 0.8rem;
+}
+
+.messages__button-cancel {
+    background: transparent;
+}
+
+.messages__button-confirm {
+    font-weight: bold;
+    background-color: transparent;
+    color: red;
+    border: 2px solid #D33F49;
+}
+
+@media screen and (min-width: 800px) {
+    .messages__image-trash {
+        width: 4.2rem;
+    }
+}
