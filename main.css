@@ -25,6 +25,8 @@
     --color-button-hover: #018E8E;
 
     --shadow-card: 8px 4px 8px black;
+
+    --gradient: linear-gradient(to right, #1B4079 0%, #4facfe 20%, #1B4079 95%);
 }
 
 * {
@@ -37,7 +39,7 @@ html {
     font-size: 62.5%; /* 10px */
     scroll-behavior: smooth;
     font-family: 'Montserrat';
-    background-color: #efefef;
+    background-color: var(--color-background);
 }
 
 body {
