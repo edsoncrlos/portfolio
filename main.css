@@ -24,8 +24,7 @@
     --color-button: #008080;
     --color-button-hover: #018E8E;
 
-    --gradient: linear-gradient(to right, #1B4079 0%, #4facfe 20%, #1B4079 95%);
-    --font-size-lg: clamp(32px, 7vw + 1rem, 72px);
+    --shadow-card: 8px 4px 8px black;
 }
 
 * {
