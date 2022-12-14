@@ -1,35 +1,31 @@
-export const Storage = {
-    
-    get() {
-        return JSON.parse(localStorage.getItem("emailMessage")) || [];
-    }, 
-    
-    set(allEmailMessage) {
-        localStorage.setItem("emailMessage", JSON.stringify(allEmailMessage));
-    },
+import {Storage, allEmailMessages} from "./modules/messages.module.js";
 
-    remove () {
-        localStorage.removeItem("emailMessage");
-    }
+// modal
+const modal = document.querySelector('.messages__modal');
+const trashCan = document.querySelector('.messages__images-trash');
+const modalExitButton = document.querySelector('.messages__button-cancel');
+const eraseMessagesButton = document.querySelector('.messages__button-confirm');
+
+trashCan.onclick = () => {
+    modal.show();
 }
 
-export const allEmailMessages = Storage.get();
-
-export class EmailMessage {
-    constructor (name, email, subject, message) {
-        this.name = name;
-        this.email = email;
-        this.subject = subject;
-        this.message = message;
-    }
+modalExitButton.onclick = () => {
+    modal.close();
 }
+
+eraseMessagesButton.onclick = () => {
+    ManageMessages.removeMessages();
+    modal.close();
+}
+
+// add messages
 const messageList = document.querySelector('.messages__list');
 const initialTextWithoutMessages = document.querySelector('.message__text');
 
 const ManageMessages = {
     
     addAllEmailMessages () {
-        if (messageList != null) {
             if (allEmailMessages.length > 0) {
                 messageList.innerHTML = `
                     <div class="messages__wrap-image">
@@ -52,14 +48,13 @@ const ManageMessages = {
                             <p class="messages__sender-text">${message.message}</p>
                         </li>
                     `;
-                }))
-            }
+            }))
         }
     },
 
     updateMessages () {
         ManageMessages.addAllEmailMessages();
-    }, 
+    },
 
     removeMessages () {
         Storage.remove();
@@ -68,30 +63,4 @@ const ManageMessages = {
     }
 }
 
-const path = document.URL.match('messages')
-
-if (path != null && path[0] === 'messages') {
-
-    ManageMessages.addAllEmailMessages ();
-
-    // modal
-    const modal = document.querySelector('.messages__modal');
-    const trashCan = document.querySelector('.messages__image-trash');
-    const modalExitButton = document.querySelector('.messages__button-cancel');
-    const eraseMessagesButton = document.querySelector('.messages__button-confirm');
-
-    if (trashCan != null) {
-        trashCan.onclick = () => {
-            modal.show();
-        }
-    }
-
-    modalExitButton.onclick = () => {
-        modal.close();
-    }
-
-    eraseMessagesButton.onclick = () => {
-        ManageMessages.removeMessages();
-        modal.close();
-    }
-}
+ManageMessages.addAllEmailMessages ();

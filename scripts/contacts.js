@@ -1,6 +1,5 @@
-import {Storage, allEmailMessages, EmailMessage} from "./messages.js";
+import {Storage, allEmailMessages, EmailMessage} from "./modules/messages.module.js";
 const form = document.querySelector('.form');
-const buttonEraseMessages = document.querySelector('.contacts__erase-messages');
 
 function showPopUpForCertainTime (selector) {
     const TimeForShowPopUp = 3000;
@@ -39,8 +38,6 @@ form.addEventListener('submit', (e) => {
         }
     }
 })
-
-buttonEraseMessages.addEventListener('click', Storage.remove);
 
 function getValues() {
     const fields = document.querySelectorAll('.form__group [required]');
