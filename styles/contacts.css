@@ -44,7 +44,7 @@
 }
 
 .form__label-text {
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
 }
 
 .form__input {
@@ -52,7 +52,7 @@
     padding-left: 1rem;
     border-radius: inherit;
     border-color:  black;
-    font-size: 1.4rem;
+    font-size: var(--font-size-sm);
 
     background-color: var(--color-background-input);
 }
@@ -63,6 +63,7 @@
     max-width: 100%;
     resize: none;
     border-radius: inherit;
+    font-size: var(--font-size-sm);
 
     background-color: var(--color-background-input);
 }
@@ -87,7 +88,7 @@
 }
 
 .form__label-error {
-    font-size: 1.6rem;
+    font-size: var(--font-size-sm);
     padding-top: 0.8rem;
 }
 
@@ -100,6 +101,7 @@
     background-color: white;
     padding: 0 12px;
     height: 40px;
+    font-size: var(--font-size-md);
 
     display: flex;
     align-items: center;
@@ -131,7 +133,6 @@
 
 .contacts__title-network {
     font-size: 2.4rem;
-    
 }
 
 .contacts-list__item {
@@ -145,12 +146,13 @@
 }
         
 .contacts-list__how-to-contact {
-    font-size: 1.8rem;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .contacts-list__contact {
-    font-size: 1.6rem;
+    font-size: var(--font-size-sm);
 }
 
 .contacts-list__image {
@@ -172,9 +174,13 @@
 }
 
 .contacts__messages {
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
     text-align: center;
     text-decoration: underline;
+}
+
+.contacts__messages:hover {
+    color: var(--color-button-hover);
 }
 
 /* clipboard  */
@@ -212,7 +218,6 @@
     .form__status {
         padding: 0 12px;
         height: 60px;
-        font-size: 18px;
     }
 
     .form__image {

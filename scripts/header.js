@@ -1,5 +1,5 @@
 const html = document.querySelector('html');
-const maxWidthWhereToggleMenuIsActive = 900;
+const maxWidthWhereToggleMenuIsActive = 1000;
 const topDistanceToHighlightPageLink = 200;
 
 // toggle Menu

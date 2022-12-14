@@ -26,7 +26,7 @@
     max-width: 100%;
     
     text-align:center;
-    font-size: 1.8rem;
+    font-size: var(--font-size-md);
     line-height: 150%;
 }
 
@@ -43,7 +43,5 @@
     .about__text {
         width: 50%;
         padding: 40px;
-        
-        font-size: 2.4rem;
     }
 }

@@ -35,17 +35,17 @@
 }
 
 .experience__card-title {
-    font-size: 1.8rem;
+    font-size: var(--font-size-lg);
 }
 
 .experience__card-institution {
-    font-size: 1.4rem;
+    font-size: var(--font-size-md);
     align-self: flex-end;
     padding-right: 0.8rem;
 }
 
 .experience__role {
-    font-size: 1.4rem;
+    font-size: var(--font-size-md);
     padding: 0.8rem;
 }
 
@@ -55,26 +55,11 @@
     padding: 0.1rem 0.5rem;
     border-radius: 0.9rem;
 
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
 }
 
 @media screen and (min-width: 400px) {
-
-    .experience__card-title {
-        font-size: 2.4rem;
-    }
-
-    .experience__card-institution {
-        font-size: 1.8rem;
-    }
-
     .experience__role {
-        font-size: 2.0rem;
         padding: 0 2.4rem;
     }
-
-    .experience__time-interval {
-        font-size: 1.4rem;
-    }
-
 }

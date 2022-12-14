@@ -41,13 +41,13 @@ const ManageMessages = {
                     messageList.innerHTML += `
                         <li class="messages__item">
                             <p class="messages__sender">
-                                <b>Nome</b> <span class="messages__sender-text">${message.name}</span>
+                                <b class="messages__label">Nome</b> <span class="messages__sender-text">${message.name}</span>
                             </p>
                             <p class="messages__sender">
-                                <b>Email</b> <span class="messages__sender-text">${message.email}</span>
+                                <b class="messages__label">Email</b> <span class="messages__sender-text">${message.email}</span>
                             </p>
                             <p class="messages__sender">
-                                <b>Assunto</b> <span class="messages__sender-text">${message.subject}</span>
+                                <b class="messages__label">Assunto</b> <span class="messages__sender-text">${message.subject}</span>
                             </p>
                             <p class="messages__sender-text">${message.message}</p>
                         </li>

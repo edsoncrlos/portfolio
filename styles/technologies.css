@@ -4,7 +4,7 @@
 
 .technologies__title {
     padding-top: 1.6rem;
-    font-size: 2.4rem;
+    font-size: var(--font-size-lg);
     text-align: center;
 }
 
@@ -35,18 +35,19 @@
 }
 
 .technologies__name {
-    font-size: 2.0rem;
     text-align: center;
     text-transform: uppercase;
+    font-size: var(--font-size-lg);
 }
 
 .technologies__definition {
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: var(--font-size-md);
     padding: 0 0.8rem;
 }
 
 .technologies__see-more {
-    font-size: 1.4rem;
+    font-size: var(--font-size-sm);
     border: none;
     background-color: transparent;
     text-decoration: underline;
@@ -68,9 +69,9 @@
 }
 
 .technologies__button {
-    font-size: 1.4rem;
+    font-size: var(--font-size-sm);
     background-color: transparent;
-    padding: 0.4rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 4em;
     cursor: pointer;
 }
@@ -78,16 +79,22 @@
 
 .technologies__list-feature {
     width: 100%;
-    font-size: 1.6rem;
 }
 
 .technologies__title-feature {
     padding-left: 0.8rem;
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
 }
 
 .technologies__item-feature {
-    font-size: 1.6rem;
+    font-size: var(--font-size-sm);
     list-style: inside;
     padding: 0.4rem 0.4rem 0 2.4rem;
+}
+
+@media screen and (min-width: 600px) {
+    .technologies__definition,
+    .technologies__list-feature {
+        width: 80%;
+    }
 }
