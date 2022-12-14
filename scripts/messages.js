@@ -21,33 +21,29 @@ eraseMessagesButton.onclick = () => {
 
 // add messages
 const messageList = document.querySelector('.messages__list');
-const initialTextWithoutMessages = document.querySelector('.message__text');
+const initialTextWithoutMessages = messageList.cloneNode(true);
+const itemTemplate = document.querySelector('.messages__item').cloneNode(true);
 
 const ManageMessages = {
     
     addAllEmailMessages () {
-            if (allEmailMessages.length > 0) {
-                messageList.innerHTML = `
-                    <div class="messages__wrap-image">
-                        <img class="messages__image-trash" src="assets/icons/trash-can.svg" alt="cesta de lixo vermelha">
-                    </div>
-                `;
+        if (allEmailMessages.length > 0) {
+            trashCan.classList.add('messages__images-trash--show');
+            const initialParagraph = messageList.querySelector('.messages__text');
+            messageList.removeChild(initialParagraph);
+            
+            itemTemplate.setAttribute('style', '');
+            allEmailMessages.forEach((message => {
+                const copyItem = itemTemplate.cloneNode(true);
+
+                const [name, email, subject, messages] = copyItem.querySelectorAll('.messages__sender-text');
+
+                name.textContent = message.email;
+                email.textContent = message.email;
+                subject.textContent = message.subject;
+                messages.textContent = message.message;
                 
-                allEmailMessages.forEach((message => {
-                    messageList.innerHTML += `
-                        <li class="messages__item">
-                            <p class="messages__sender">
-                                <b class="messages__label">Nome</b> <span class="messages__sender-text">${message.name}</span>
-                            </p>
-                            <p class="messages__sender">
-                                <b class="messages__label">Email</b> <span class="messages__sender-text">${message.email}</span>
-                            </p>
-                            <p class="messages__sender">
-                                <b class="messages__label">Assunto</b> <span class="messages__sender-text">${message.subject}</span>
-                            </p>
-                            <p class="messages__sender-text">${message.message}</p>
-                        </li>
-                    `;
+                messageList.appendChild(copyItem);
             }))
         }
     },
@@ -57,9 +53,9 @@ const ManageMessages = {
     },
 
     removeMessages () {
+        trashCan.classList.remove('messages__images-trash--show');
         Storage.remove();
-        messageList.innerHTML = '';
-        messageList.appendChild(initialTextWithoutMessages)
+        messageList.innerHTML = initialTextWithoutMessages.innerHTML;
     }
 }
 
