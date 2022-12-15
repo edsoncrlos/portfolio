@@ -1,4 +1,4 @@
-import {Storage, allEmailMessages, EmailMessage} from "./modules/messages.module.js";
+import {StorageEmailMessages, allEmailMessages, EmailMessage} from "./modules/messages.module.js";
 const form = document.querySelector('.form');
 
 function showPopUpForCertainTime (selector) {
@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
         const {name, email, subject, message} = getValues();
         const emailMessage = new EmailMessage(name, email, subject, message);
         allEmailMessages.push(emailMessage);
-        Storage.set(allEmailMessages);
+        StorageEmailMessages.set(allEmailMessages);
         showPopUpForCertainTime('form__success');
         
     } catch (e) {

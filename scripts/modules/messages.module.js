@@ -1,4 +1,4 @@
-export const Storage = {
+export const StorageEmailMessages = {
     
     get() {
         return JSON.parse(localStorage.getItem("emailMessage")) || [];
@@ -13,7 +13,7 @@ export const Storage = {
     }
 }
 
-export const allEmailMessages = Storage.get();
+export const allEmailMessages = StorageEmailMessages.get();
 
 export class EmailMessage {
     constructor (name, email, subject, message) {

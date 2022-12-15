@@ -1,4 +1,4 @@
-import {Storage, allEmailMessages} from "./modules/messages.module.js";
+import {StorageEmailMessages, allEmailMessages} from "./modules/messages.module.js";
 
 // modal
 const modal = document.querySelector('.messages__modal');
@@ -50,7 +50,7 @@ const ManageMessages = {
     
     removeMessages () {
         trashCan.classList.remove('messages__images-trash--show');
-        Storage.remove();
+        StorageEmailMessages.remove();
         messageList.innerHTML = initialTextWithoutMessages.innerHTML;
     }
 }
