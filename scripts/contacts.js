@@ -1,8 +1,16 @@
 import {StorageEmailMessages, allEmailMessages, EmailMessage} from "./modules/messages.module.js";
 const form = document.querySelector('.form');
+const TimeForShowPopUp = 4000;
+const TimeShowCheckIcon = 3000;
+
+function cleanFields() {
+    const fields = document.querySelectorAll('.form__group [required]');
+    fields.forEach((field) => {
+        field.value = '';
+    }); 
+}
 
 function showPopUpForCertainTime (selector) {
-    const TimeForShowPopUp = 3000;
     const popUP = document.querySelector(`.${selector}`);
     popUP.classList.remove('form__status--display-none');
 
@@ -20,6 +28,7 @@ form.addEventListener('submit', (e) => {
         allEmailMessages.push(emailMessage);
         StorageEmailMessages.set(allEmailMessages);
         showPopUpForCertainTime('form__success');
+        cleanFields();
         
     } catch (e) {
         if (e instanceof emailFormatException) {
@@ -138,7 +147,7 @@ function toggleIconsInClipboard () {
     setInterval (() => {
         copy.classList.remove('clipboard__icon--display-none');
         success.classList.add('clipboard__icon--display-none');
-    }, 3000);
+    }, TimeShowCheckIcon);
 }
 
 clipboard.onclick = () => {
