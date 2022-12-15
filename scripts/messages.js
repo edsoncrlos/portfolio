@@ -38,7 +38,7 @@ const ManageMessages = {
 
                 const [name, email, subject, messages] = copyItem.querySelectorAll('.messages__sender-text');
 
-                name.textContent = message.email;
+                name.textContent = message.name;
                 email.textContent = message.email;
                 subject.textContent = message.subject;
                 messages.textContent = message.message;
@@ -47,11 +47,7 @@ const ManageMessages = {
             }))
         }
     },
-
-    updateMessages () {
-        ManageMessages.addAllEmailMessages();
-    },
-
+    
     removeMessages () {
         trashCan.classList.remove('messages__images-trash--show');
         Storage.remove();
