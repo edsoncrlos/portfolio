@@ -94,8 +94,9 @@
 
 .form__status {
     position: fixed;
-    bottom: 70px;
-    left: 0.5%;
+    top: 6.8rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
     border: 1px solid black;
     border-radius: 0.4rem;
     background-color: white;
