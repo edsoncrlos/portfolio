@@ -4,40 +4,36 @@ const topDistanceToHighlightPageLink = 200;
 
 // toggle Menu
 
-const [buttonOpenMenu, buttonCloseMenu] = document.querySelector('.toggle-menu').children;
+const toggleButton = document.querySelector('.toggle-menu');
+const [IconOpenMenu, IconCloseMenu] = toggleButton.children;
+
 const topHeader = document.querySelector('.header');
 const websitePageList = document.querySelector('.menu');
+let menuIsOpen = false;
 
-function openMenu() {
-    buttonOpenMenu.classList.add('toggle-menu__open--display-none');
-    buttonCloseMenu.classList.remove('toggle-menu__close--display-none');
+function toggeMenu() {
+    IconOpenMenu.classList.toggle('toggle-menu__open--display-none');
+    IconCloseMenu.classList.toggle('toggle-menu__close--display-none');
 
-    topHeader.classList.add('header--take-all-height-screen');
-    websitePageList.classList.add('menu--show-list');
-    html.style.overflowY = 'hidden';
+    topHeader.classList.toggle('header--take-all-height-screen');
+    websitePageList.classList.toggle('menu--show-list');
+    if (!menuIsOpen) {
+        html.style.overflowY = 'hidden';
+        window.addEventListener('resize', closeMenuWhenResizeforDesktop);
+    } else {
+        html.style.overflowY = 'auto';
+        window.removeEventListener('resize', closeMenuWhenResizeforDesktop);
+    }
 
-    window.addEventListener('resize', closeMenuWhenResizeforDesktop);
+    menuIsOpen = !menuIsOpen;
 }
-
-function closeMenu() {
-    buttonOpenMenu.classList.remove('toggle-menu__open--display-none');
-    buttonCloseMenu.classList.add('toggle-menu__close--display-none');
-
-    topHeader.classList.remove('header--take-all-height-screen');
-    websitePageList.classList.remove('menu--show-list');
-    html.style.overflowY = 'auto';
-
-    window.removeEventListener('resize', closeMenuWhenResizeforDesktop);
-}
+toggleButton.addEventListener('click', toggeMenu);
 
 function closeMenuWhenResizeforDesktop () {
     if (window.innerWidth >= maxWidthWhereToggleMenuIsActive) {
-        closeMenu();
+        toggeMenu();
     };
 }
-
-buttonOpenMenu.addEventListener('click', openMenu);
-buttonCloseMenu.addEventListener('click', closeMenu);
 
 // change link color according to scroll
 
@@ -55,7 +51,7 @@ function currentPage(e) {
     changeColorPageLink(e.target);
 
     if (window.innerWidth < maxWidthWhereToggleMenuIsActive) {
-        closeMenu();
+        toggeMenu();
     }
 }
 

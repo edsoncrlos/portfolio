@@ -140,6 +140,11 @@
     padding-top: 0.8rem;
 }
 
+.contacts-list__link {
+    display: block;
+    height: 100%;
+}
+
 .contacts-list__wrap {
     display: inline-flex;
     align-items: center;
@@ -187,6 +192,7 @@
 /* clipboard  */
 .clipboard {
     display: inline-block;
+    border: none;
     cursor: pointer;
 }
 

@@ -9,8 +9,6 @@
 }
 
 .header__title {
-    padding-left: 2.4rem;
-
     color: var(--color-text-light);
     font-size: clamp(32px, 4vw, 48px);
     font-weight: 200;
@@ -21,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2.4rem;
 }
 
 .header--take-all-height-screen {
@@ -29,26 +28,22 @@
 }
 
 .toggle-menu {
-    padding-right: 2.4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .toggle-menu__image {
     color: var(--color-text-light);
     fill: currentColor;
     width: 3.2rem;
-    cursor: pointer;
 }
 
 .toggle-menu__close,
 .toggle-menu__open {
-    border: transparent;
-    background: transparent; 
-    
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    cursor: pointer;
 }
 
 .toggle-menu__close--display-none,
