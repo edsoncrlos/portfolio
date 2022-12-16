@@ -8,6 +8,8 @@
 @import url("styles/experience.css");
 @import url("styles/footer.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
 :root {
     --color-text-light: #f0f0f0;
     --color-text-dark: #000000;
@@ -24,8 +26,15 @@
     --color-button: #008080;
     --color-button-hover: #018E8E;
 
+    --shadow-card: 8px 4px 8px black;
+
     --gradient: linear-gradient(to right, #1B4079 0%, #4facfe 20%, #1B4079 95%);
-    --font-size-lg: clamp(32px, 7vw + 1rem, 72px);
+    --font-size-xxlg: clamp(32px, 5vw + 0.1em, 72px);
+    --font-size-xlg: clamp(24px, 4vw + 0.1em, 64px);
+    --font-size-lg: clamp(18px, 4vw + 0.1em, 32px);
+    --font-size-md: clamp(16px, 3.5vw + 0.1em, 24px);
+    --font-size-sm: clamp(13px, 3vw + 0.1em, 18px);
+    --font-size-xsm: clamp(10px, 3vw + 0.1em, 16px);
 }
 
 * {
@@ -37,8 +46,8 @@
 html {
     font-size: 62.5%; /* 10px */
     scroll-behavior: smooth;
-    font-family: 'Montserrat';
-    background-color: #efefef;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-background);
 }
 
 body {
@@ -55,7 +64,7 @@ a {
 }
 
 section h2 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xxlg);
     font-weight: 300;
     margin-top: 4rem;
     text-align: center;

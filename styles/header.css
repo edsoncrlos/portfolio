@@ -12,7 +12,7 @@
     padding-left: 2.4rem;
 
     color: var(--color-text-light);
-    font-size: 3.2rem;
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 200;
 }
 
@@ -62,7 +62,6 @@
 
 .menu--show-list {
     padding-top: 4rem;
-    font-size: 4rem;  
 
     display: flex;
     justify-content: center;
@@ -74,6 +73,7 @@
     align-items: center;
     gap: 2.4rem;
     font-weight: 300;
+    font-size: var(--font-size-xxlg);
 }
 
 
@@ -81,11 +81,11 @@
     color: var(--color-secondary-contrast);
 }
 
-.list__link:last-child {
+.list__link {
     padding-bottom: 2.4rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .toggle-menu {
         display: none;
     }
@@ -107,5 +107,10 @@
         flex-direction: row;
         align-items: center;
         gap: 1.6rem;
+        font-size: clamp(24px, 2.3vw, 32px);
+    }
+
+    .list__link {
+        padding: 0;
     }
 }

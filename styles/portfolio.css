@@ -42,7 +42,12 @@
 }
 
 .portfolio__card-title {
-    font-size: 1.8rem;
+    font-size: var(--font-size-md);
+    padding-top: 1.6rem;
+}
+
+.portfolio__modal-card-title {
+    font-size: var(--font-size-lg);
     padding-top: 1.6rem;
 }
 
@@ -78,13 +83,13 @@
 }
 
 .portfolio__why {
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
     text-align: center;
     padding-top: 1rem;
 }
 
 .portfolio__description {
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
     text-align: center;
     padding: 1rem 1rem 0;
 }

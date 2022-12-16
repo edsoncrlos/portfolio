@@ -1,59 +1,57 @@
-export const Storage = {
-    
-    get() {
-        return JSON.parse(localStorage.getItem("emailMessage")) || [];
-    }, 
-    
-    set(allEmailMessage) {
-        localStorage.setItem("emailMessage", JSON.stringify(allEmailMessage));
-    },
+import {StorageEmailMessages, allEmailMessages} from "./modules/messages.module.js";
 
-    remove () {
-        localStorage.removeItem("emailMessage");
-    }
+// modal
+const modal = document.querySelector('.messages__modal');
+const trashCan = document.querySelector('.messages__images-trash');
+const modalExitButton = document.querySelector('.messages__button-cancel');
+const eraseMessagesButton = document.querySelector('.messages__button-confirm');
+
+trashCan.onclick = () => {
+    modal.show();
 }
 
-export const allEmailMessages = Storage.get();
-
-export class EmailMessage {
-    constructor (name, email, subject, message) {
-        this.name = name;
-        this.email = email;
-        this.subject = subject;
-        this.message = message;
-    }
+modalExitButton.onclick = () => {
+    modal.close();
 }
+
+eraseMessagesButton.onclick = () => {
+    ManageMessages.removeMessages();
+    modal.close();
+}
+
+// add messages
 const messageList = document.querySelector('.messages__list');
+const initialTextWithoutMessages = messageList.cloneNode(true);
+const itemTemplate = document.querySelector('.messages__item').cloneNode(true);
 
 const ManageMessages = {
     
     addAllEmailMessages () {
-        if (messageList != null) {
-            if (allEmailMessages.length > 0) {
-                messageList.innerHTML = '';
+        if (allEmailMessages.length > 0) {
+            trashCan.classList.add('messages__images-trash--show');
+            const initialParagraph = messageList.querySelector('.messages__text');
+            messageList.removeChild(initialParagraph);
+            
+            itemTemplate.setAttribute('style', '');
+            allEmailMessages.forEach((message => {
+                const copyItem = itemTemplate.cloneNode(true);
+
+                const [name, email, subject, messages] = copyItem.querySelectorAll('.messages__sender-text');
+
+                name.textContent = message.name;
+                email.textContent = message.email;
+                subject.textContent = message.subject;
+                messages.textContent = message.message;
                 
-                allEmailMessages.forEach((message => {
-                    messageList.innerHTML += `
-                        <li class="messages__item">
-                            <p class="messages__sender">
-                                <b>Nome</b> <span class="messages__sender-text">${message.name}</span>
-                            </p>
-                            <p class="messages__sender">
-                                <b>Email</b> <span class="messages__sender-text">${message.email}</span>
-                            </p>
-                            <p class="messages__sender">
-                                <b>Assunto</b> <span class="messages__sender-text">${message.subject}</span>
-                            </p>
-                            <p>${message.message}</p>
-                        </li>
-                    `;
-                }))
-            }
+                messageList.appendChild(copyItem);
+            }))
         }
     },
-
-    updateMessages () {
-        ManageMessages.addAllEmailMessages();
+    
+    removeMessages () {
+        trashCan.classList.remove('messages__images-trash--show');
+        StorageEmailMessages.remove();
+        messageList.innerHTML = initialTextWithoutMessages.innerHTML;
     }
 }
 

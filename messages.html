@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messages</title>
+    <link rel="stylesheet" href="styles/messages.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <main>
@@ -12,9 +14,41 @@
             <h2 class="messages__title">Mensagens Recebidas</h2>
 
             <ul class="messages__list">
-                <p class="message__text">Você ainda não recebeu nenhuma mensagem.</p>
+                <div class="messages__wrap-image">
+                    <a href="./index.html#contacts-link">
+                        <img class="messages__images messages__images-arrow-left" src="assets/icons/arrow-left.svg" alt="seta apontando para esquerda para voltar para página anterior">
+                    </a>
+                    <img class="messages__images messages__images-trash" src="assets/icons/trash-can.svg" alt="cesta de lixo vermelha">
+                </div>
+                <p class="messages__text">Você ainda não recebeu nenhuma mensagem.</p>
+                </p>
+                
+                <li class="messages__item" style="display: none;">
+                    <p class="messages__sender">
+                        <b class="messages__label">Nome</b> <span class="messages__sender-text"></span>
+                    </p>
+                    <p class="messages__sender">
+                        <b class="messages__label">Email</b> <span class="messages__sender-text"></span>
+                    </p>
+                    <p class="messages__sender">
+                        <b class="messages__label">Assunto</b> <span class="messages__sender-text"></span>
+                    </p>
+                    <p class="messages__sender-text"></p>
+                </li>
             </ul>
+
+            <dialog class="messages__modal">
+                <div class="messages__wrap">
+
+                    <p class="messages__warn-text">Você tem certeza que deseja apagar todas as mensagens?</p>
+                    <div class="messages__wrap-buttons">
+                        <button class="messages__buttons messages__button-cancel">Cancelar</button>
+                        <button class="messages__buttons messages__button-confirm">Sim</button>
+                    </div>
+                </div>
+            </dialog>
         </section>
+
     </main>
 
     <script type="module" src="scripts/messages.js"></script>

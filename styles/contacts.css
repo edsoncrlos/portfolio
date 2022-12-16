@@ -44,7 +44,7 @@
 }
 
 .form__label-text {
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
 }
 
 .form__input {
@@ -52,7 +52,7 @@
     padding-left: 1rem;
     border-radius: inherit;
     border-color:  black;
-    font-size: 1.4rem;
+    font-size: var(--font-size-sm);
 
     background-color: var(--color-background-input);
 }
@@ -63,6 +63,7 @@
     max-width: 100%;
     resize: none;
     border-radius: inherit;
+    font-size: var(--font-size-sm);
 
     background-color: var(--color-background-input);
 }
@@ -83,12 +84,41 @@
 
 .form__button:hover {
     box-shadow: 1px 1px 5px 2px black;
-    background-color: var(--color-button);
+    background-color: var(--color-button-hover);
 }
 
 .form__label-error {
-    font-size: 1.6rem;
+    font-size: var(--font-size-sm);
     padding-top: 0.8rem;
+}
+
+.form__status {
+    position: fixed;
+    top: 6.8rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    background-color: white;
+    padding: 0 12px;
+    height: 40px;
+    font-size: var(--font-size-md);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    font-weight: 500;
+}
+
+.form__status--display-none {
+    display: none;
+}
+
+.form__image {
+    width: 20px;
+    border-radius: 10em;
 }
 
 /* Contacts */
@@ -104,20 +134,26 @@
 
 .contacts__title-network {
     font-size: 2.4rem;
-    
 }
 
 .contacts-list__item {
     padding-top: 0.8rem;
 }
 
+.contacts-list__wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+        
 .contacts-list__how-to-contact {
-    font-size: 1.8rem;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .contacts-list__contact {
-    font-size: 1.6rem;
+    font-size: var(--font-size-sm);
 }
 
 .contacts-list__image {
@@ -138,6 +174,30 @@
     padding-left: 1.2rem;
 }
 
+.contacts__messages {
+    font-size: var(--font-size-lg);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contacts__messages:hover {
+    color: var(--color-button-hover);
+}
+
+/* clipboard  */
+.clipboard {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.clipboard__icon {
+    width: 40px;
+}
+
+.clipboard__icon--display-none {
+    display: none;
+}
+
 @media screen and (min-width: 800px) {
     .contacts__content {
         align-self: center;
@@ -148,10 +208,20 @@
 
     .form {
         max-width: 40rem;
+        margin-right: 3.2rem;
     }
 
     .contacts__container {
         order: -2;
-        max-width: 30rem;
+        max-width: 35rem;
     }
+
+    .form__status {
+        padding: 0 12px;
+        height: 60px;
+    }
+
+    .form__image {
+        width: 24px;
+    }    
 }

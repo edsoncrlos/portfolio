@@ -10,6 +10,7 @@
 
 .home__text {
     font-size: 3rem;
+    font-weight: 300;
 }
 
 .home__name {
@@ -42,7 +43,7 @@
     bottom: 4px;
     width: 100%;
     text-align: right;
-    font-size: 1.6rem;
+    font-size: var(--font-size-xsm);
 }
 
 .home__legend-link {

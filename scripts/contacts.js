@@ -1,6 +1,23 @@
-import {Storage, allEmailMessages, EmailMessage} from "./messages.js";
+import {StorageEmailMessages, allEmailMessages, EmailMessage} from "./modules/messages.module.js";
 const form = document.querySelector('.form');
-const buttonEraseMessages = document.querySelector('.contacts__erase-messages');
+const TimeForShowPopUp = 4000;
+const TimeShowCheckIcon = 3000;
+
+function cleanFields() {
+    const fields = document.querySelectorAll('.form__group [required]');
+    fields.forEach((field) => {
+        field.value = '';
+    }); 
+}
+
+function showPopUpForCertainTime (selector) {
+    const popUP = document.querySelector(`.${selector}`);
+    popUP.classList.remove('form__status--display-none');
+
+    setInterval(() => {
+        popUP.classList.add('form__status--display-none');
+    }, TimeForShowPopUp);
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -9,8 +26,10 @@ form.addEventListener('submit', (e) => {
         const {name, email, subject, message} = getValues();
         const emailMessage = new EmailMessage(name, email, subject, message);
         allEmailMessages.push(emailMessage);
-        Storage.set(allEmailMessages);
-
+        StorageEmailMessages.set(allEmailMessages);
+        showPopUpForCertainTime('form__success');
+        cleanFields();
+        
     } catch (e) {
         if (e instanceof emailFormatException) {
             removeCharactersNotAllowed(e);
@@ -24,11 +43,10 @@ form.addEventListener('submit', (e) => {
             spanErrorMessage.classList.remove('sr-only');
         } else {
             console.log(e);
+            showPopUpForCertainTime('form__error');
         }
     }
 })
-
-buttonEraseMessages.addEventListener('click', Storage.remove);
 
 function getValues() {
     const fields = document.querySelectorAll('.form__group [required]');
@@ -115,3 +133,32 @@ const RequiredFields = {
 RequiredFields.requiredFields.forEach((required) => {
     required.addEventListener('invalid', (e) => RequiredFields.invalid(e));
 })
+
+//clipboard
+const clipboard = document.querySelector('.clipboard');
+
+function toggleIconsInClipboard () {
+    const copy = document.querySelector('.clipboard__copy');
+    const success = document.querySelector('.clipboard__success');
+
+    copy.classList.add('clipboard__icon--display-none');
+    success.classList.remove('clipboard__icon--display-none');
+
+    setInterval (() => {
+        copy.classList.remove('clipboard__icon--display-none');
+        success.classList.add('clipboard__icon--display-none');
+    }, TimeShowCheckIcon);
+}
+
+clipboard.onclick = () => {
+    const contact = document.querySelector('.contacts-list__contact');
+
+    try {
+        (async () => {
+            await navigator.clipboard.writeText(contact.textContent)
+        })();
+        toggleIconsInClipboard();
+    } catch (e) {
+        console.log(e)
+    };
+}

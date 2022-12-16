@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
-    
+     
     <link rel="stylesheet" href="main.css">
     <title>Edson Carlos</title>
 </head>
@@ -111,7 +107,7 @@
                         <div class="portfolio__wrap">
                             <video class="portfolio__video" src="assets/videos/dev-finance.mp4" controls></video>
                             
-                            <h3 class="portfolio__card-title">Dev.finance</h3>
+                            <h3 class="portfolio__modal-card-title">Dev.finance</h3>
                             <p class="portfolio__why">Aplicativo desenvolvido na primeira Maratona discover da Rocketseat.</p>
                             <button class="portfolio__close-modal">
                                 <svg class="toggle-menu__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -806,6 +802,25 @@
                     </label>
 
                     <button class="form__button" type="submit">Enviar</button>
+
+                    <aside>
+                        <div class="form__status form__success form__status--display-none">
+                            <svg class="form__image"  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="3" stroke="white" fill="#2dcc71" stroke-linecap="" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="#2dcc71"></path>
+                                <path d="M5 12l5 5l10 -10"></path>
+                             </svg>
+                            <p>Mensagem enviada</p>
+                        </div>
+                        <div class="form__status form__error form__status--display-none" >
+                            <svg class="form__image" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24" stroke-width="2" stroke="#D33F49" fill="" stroke-linecap="roun" stroke-linejoin="">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="20" y1="4" x2="4" y2="20"></line>
+                                <line x1="4" y1="4" x2="20" y2="20"></line>
+                            </svg>
+
+                            <p>Erro ao enviar</p>
+                        </div>
+                    </aside>
                 </form>
 
                 <article class="contacts__container">
@@ -814,7 +829,20 @@
                         <ul class="contacts-list">
                             <li class="contacts-list__item">
                                 <span class="contacts-list__how-to-contact">email:</span>
-                                <span class="contacts-list__contact">edsoncarlos.dev@gmail.com</span>
+                                <div class="contacts-list__wrap">
+                                    <span class="contacts-list__contact">edsoncarlos.dev@gmail.com</span>
+                                    <div class="clipboard">
+                                        <svg class="clipboard__copy clipboard__icon " xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="1.1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <rect x="8" y="8" width="12" height="12" rx="2" />
+                                            <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                                        </svg>
+                                        <svg class="clipboard__success clipboard__icon clipboard__icon--display-none" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-check" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M9 12l2 2l4 -4" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </section>
@@ -844,12 +872,10 @@
                             </li>
                         </ul>
                     </section>
-                </article>
-
-                <button class="contacts__erase-messages">Apagar todas as mensagens.</button>
+                </article>       
             </div>
             
-            <a href="./messages.html">Visuailizar Mensagens</a>
+            <a class="contacts__messages" href="./messages.html">Visualizar Mensagens</a>
         </section>
 
         <section class="education" id="education-link">
@@ -858,19 +884,19 @@
             <div class="education__cards">
                 <section class="education__card">
                     <h3 class="education__card-title">Ciência da computação</h3>
-                    <p class="education__card-institution">Universidade Federal do Marenhão - UFMA</p>
+                    <p class="education__card-institution">Universidade Federal do <span class="education__hyphen">Marenhão - UFMA</span></p>
                     <p class="education__time-interval">2020 - </p>
                 </section>
 
                 <section class="education__card">
                     <h3 class="education__card-title">Ensino Médio</h3>
-                    <p class="education__card-institution">Centro Integrado do Rio Anil - ANIL</p>
+                    <p class="education__card-institution">Centro Integrado do Rio <span class="education__hyphen">Anil - CINTRA</span></p>
                     <p class="education__time-interval">2015 - 2018</p>
                 </section>
 
                 <section class="education__card">
                     <h3 class="education__card-title">Ensino Fundamental II</h3>
-                    <p class="education__card-institution">Centro Integrado do Rio Anil - ANIL</p>
+                    <p class="education__card-institution">Centro Integrado do Rio <span class="education__hyphen">Anil - CINTRA</span></p>
                     <p class="education__time-interval">2012 - 2014</p>
                 </section>       
             </div>
