@@ -14,7 +14,7 @@ function showPopUpForCertainTime (selector) {
     const popUP = document.querySelector(`.${selector}`);
     popUP.classList.remove('form__status--display-none');
 
-    setInterval(() => {
+    setTimeout(() => {
         popUP.classList.add('form__status--display-none');
     }, TimeForShowPopUp);
 }
@@ -144,7 +144,7 @@ function toggleIconsInClipboard () {
     copy.classList.add('clipboard__icon--display-none');
     success.classList.remove('clipboard__icon--display-none');
 
-    setInterval (() => {
+    setTimeout (() => {
         copy.classList.remove('clipboard__icon--display-none');
         success.classList.add('clipboard__icon--display-none');
     }, TimeShowCheckIcon);
